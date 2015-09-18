@@ -1,0 +1,19 @@
+{
+  "name": "gulp-starter",
+  "version": "0.0.1",
+  "authors": [
+    "Culttm <culttm@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
