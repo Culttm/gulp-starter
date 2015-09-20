@@ -7,7 +7,7 @@ var gulpif = require('gulp-if');
 var notify = require('gulp-notify');
 var env = gutil.env.env;
 
-gulp.task('compass', ['sprite'], function() {
+gulp.task('compass', function() {
     
     return  gulp.src('./src/sass/**/*.scss')
             .pipe(plumber({

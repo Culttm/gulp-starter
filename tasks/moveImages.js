@@ -4,7 +4,7 @@ var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 
 gulp.task('moveImages', ['cleanImages'], function() {
-    var src = './src/images/*',
+    var src = ['./src/images/*.png', './src/images/*.jpg'],
         dist = './dist/images';
  
     return  gulp.src(src)

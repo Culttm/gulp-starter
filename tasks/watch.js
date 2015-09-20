@@ -5,8 +5,12 @@ var watch  = require('gulp-watch')
 
 
 gulp.task('watch', function () {
-	watch('./src/images/**/*', function(){
-		gulp.start('moveImages')
+	watch(['./src/images/*.png', './src/images/*.jpg'], function(){
+		gulp.start(['moveImages'])
+	});
+
+	watch('./src/images/sp/*', function(){
+		gulp.start(['sprite'])
 	});
 
 	watch('./src/assets/**/*', function(){
