@@ -8,7 +8,8 @@ gulp.task('default', function(){
 			    'moveFonts',
 			    'moveAssets',
 			    'moveImages',
-			    'moveHtml'
+			    'moveHtml',
+		    	'coffee'
 			],
 		    'sprite',
 		    'cleanCss',

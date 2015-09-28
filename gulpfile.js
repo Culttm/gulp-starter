@@ -1,2 +1,3 @@
 var requireDir = require('require-dir');
-var tasks = requireDir('./tasks');
+var config = require('./gulpbuilder/configuration/config');
+var tasks = requireDir('./gulpbuilder/tasks');

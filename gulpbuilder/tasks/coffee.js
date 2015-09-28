@@ -1,3 +1,7 @@
+var config    = require('../configuration/config');
+if(!config.tasks.coffee) return
+
+
 var gulp = require('gulp');
 var coffee = require('gulp-coffee');
 var plumber = require('gulp-plumber');
@@ -8,9 +12,17 @@ var notify = require('gulp-notify');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var env = gutil.env.env;
+var path = require('path');
+
+
+var paths = {
+  src: path.join(config.root.src, config.tasks.coffee.src, '/**/*.' + config.tasks.coffee.extensions),
+  dest: path.join(config.root.dest, config.tasks.coffee.dest)
+};
+
 
 gulp.task('coffee', function() {
-  gulp.src('./src/coffee/*.coffee')
+  gulp.src(paths.src)
     .pipe(plumber({
         errorHandler: function (error) {
         console.log(error.message);
@@ -28,8 +40,8 @@ gulp.task('coffee', function() {
     .on('error', function(err) {
         console.log(err)
     })      
-    .pipe(concat('main.js'))
+    .pipe(concat(config.tasks.coffee.outputName))
     .pipe( gulpif( env === 'production', uglify()))
-    .pipe(gulp.dest('./dist/js/'))
-    .pipe(notify({ message: 'Coffee task complete' }))
+    .pipe(gulp.dest(paths.dest))
+    .pipe(notify({ message: 'Coffee task complete!' }))
 });
