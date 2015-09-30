@@ -75,7 +75,7 @@ module.exports = {
         folder: mainFolders.images
       },
       html: {
-        folder: mainFolders.html + '/*.html'
+        folder: mainFolders.html
       }
       
     },
@@ -93,7 +93,8 @@ module.exports = {
         folder: mainFolders.images
       },
       html: {
-        folder: mainFolders.html
+        src: mainFolders.html,
+        folder: mainFolders.dest
       }
     }
   }

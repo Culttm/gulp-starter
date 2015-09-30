@@ -5,14 +5,17 @@ var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var changed = require('gulp-changed');
 var path = require('path'); 
+var rigger = require('gulp-rigger'); 
 
 var paths = {
-  src: path.join(config.root.src, config.tasks.move.html.folder, '**/*.html'),
-  dest: path.join(config.root.dest, config.tasks.move.html.folder)
+  src: path.join(config.root.src, config.tasks.move.html.src, '/**/*.html'),
+  dest: config.root.dest
 }
 
 
 gulp.task('moveHtml', function() {
+
+    console.log(paths.dest)
  
     return  gulp.src(paths.src)
             .pipe(plumber({
@@ -20,6 +23,7 @@ gulp.task('moveHtml', function() {
                 console.log(error.message);
                 this.emit('end');
             }}))
+            .pipe(rigger())
             .pipe(changed(paths.dest))
             .pipe(gulp.dest(paths.dest));
 });

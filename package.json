@@ -18,6 +18,7 @@
     "gulp-imagemin": "^2.3.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
+    "gulp-rigger": "^0.5.8",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.4.1",
     "gulp-util": "^3.0.6",
@@ -33,6 +34,6 @@
     "gulp-dev": "gulp default --env=development",
     "gulp-prod": "gulp default --env=production"
   },
-  "author": "",
+  "author": "Culttm",
   "license": "ISC"
 }

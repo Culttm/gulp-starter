@@ -3,14 +3,15 @@ var runSequence = require('run-sequence');
 
 gulp.task('default', function(){
 		runSequence(
+			// 'installBower',
 			[
-			    'bower',
 			    'moveFonts',
 			    'moveAssets',
 			    'moveImages',
 			    'moveHtml',
 		    	'coffee'
 			],
+			'bower',
 		    'sprite',
 		    'cleanCss',
 		    'compass',

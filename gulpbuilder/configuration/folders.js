@@ -8,6 +8,6 @@ module.exports = {
 	images: 'images',
 	assets: 'assets',
 	fonts: 'fonts',
-	html: '/',
+	html: 'html',
 	bower: 'vendors'
 }

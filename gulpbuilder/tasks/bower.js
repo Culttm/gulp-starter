@@ -1,3 +1,4 @@
+var mainFolders = require('../configuration/folders');
 var config    = require('../configuration/config');
 if(!config.tasks.bower) return
 
@@ -25,19 +26,15 @@ var filter = {
 
 gulp.task('bower', function() {
 
-  // bower();
-
   if (fs.existsSync(paths.src)) { 
-
       gulp.src(bowerFiles())
           .pipe(filter.jsFilter)
           .pipe(concat(config.tasks.bower.outputName.js))
-          .pipe(gulp.dest(paths.dest.js))
-
+          .pipe(gulp.dest(paths.dest.js));          
       gulp.src(bowerFiles())
           .pipe(filter.cssFilter)
           .pipe(concat(config.tasks.bower.outputName.css))
-          .pipe(gulp.dest(paths.dest.css))
+          .pipe(gulp.dest(paths.dest.css));
   } 
 
 });

@@ -27,7 +27,7 @@ gulp.task('watch', function () {
 		gulp.start('coffee')
 	});
 
-	watch(path.join(config.root.src, config.tasks.move.html.folder, '**/*.html'), function(){
+	watch(path.join(config.root.src, config.tasks.move.html.src, '/**/*.html'), function(){
 		gulp.start('moveHtml')
 	});
 
