@@ -7,7 +7,7 @@ var path   = require('path')
 
 
 gulp.task('watch', function () {
-	watch(path.join(config.root.src, config.tasks.move.images.folder, '/*.*'), function(){
+	watch(path.join(config.root.src, config.tasks.move.images.folder, '*.*'), function(){
 		gulp.start(['moveImages'])
 	});
 
@@ -19,19 +19,19 @@ gulp.task('watch', function () {
 		gulp.start('moveAssets')
 	});
 
-	watch(path.join(config.root.src, config.tasks.move.fonts.folder, '/**/*'), function(){
+	watch(path.join(config.root.src, config.tasks.move.fonts.folder, '**/*.*'), function(){
 		gulp.start('moveFonts')
 	});
 
-	watch(path.join(config.root.src, config.tasks.coffee.src, '/**/*.' + config.tasks.coffee.extensions), function(){
+	watch(path.join(config.root.src, config.tasks.coffee.src, '**/*.' + config.tasks.coffee.extensions), function(){
 		gulp.start('coffee')
 	});
 
-	watch(path.join(config.root.src, config.tasks.move.html.src, '/**/*.html'), function(){
+	watch(path.join(config.root.src, config.tasks.move.html.src, '**/*.html'), function(){
 		gulp.start('moveHtml')
 	});
 
-	watch(path.join(config.root.src, config.tasks.compass.src, '/**/*.' + config.tasks.compass.extensions), function(){
+	watch(path.join(config.root.src, config.tasks.compass.src, '**/*.' + config.tasks.compass.extensions), function(){
 		gulp.start('compass')
 	});
 });

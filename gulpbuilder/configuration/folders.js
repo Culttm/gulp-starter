@@ -1,3 +1,6 @@
+/*
+	Global folders
+*/
 module.exports = {
 	src: './src',
 	dest: './dist',

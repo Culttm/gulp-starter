@@ -1,0 +1,68 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+body {
+  background: #f2f2f2;
+}
+@media (max-width: 950px) {
+  body {
+    background: #ccc;
+  }
+}
+@media (max-width: 760px) {
+  body {
+    background: #fcfcfc;
+  }
+}
+
+.wrapper {
+  max-width: 900px;
+  height: 200px;
+  margin: 0 auto;
+}
+@media (max-width: 950px) {
+  .wrapper {
+    background: #222;
+    max-width: 600px;
+  }
+}
+@media (max-width: 950px) {
+  .wrapper {
+    border: 2px solid #ccc;
+  }
+}
+@media (max-width: 760px) {
+  .wrapper {
+    background: #000;
+    max-width: 320px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

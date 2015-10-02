@@ -47,7 +47,7 @@ module.exports = {
         cssName: '_sprites.scss',
         cssFormat : 'scss',
         algorithm: 'binary-tree',
-        imgPath: '../' + mainFolders.images + 'sprite.png'
+        imgPath: '../' + mainFolders.images + '/sprite.png'
       }
     },
     bower: {

@@ -1,8 +1,14 @@
 @import "compass";
-@import "mixins";
+
 @import "sprites";
 
+@import "mixins";
+@import "../vendors/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 
-body{
-	background: #f2f2f2;
-}
+@import "../vendors/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "variables";
+
+@import "../vendors/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "../vendors/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+
+@import "utils";

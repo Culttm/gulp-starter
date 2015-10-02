@@ -12,12 +12,4 @@ gulp.task('server', [ 'moveHtml' ], function () {
 	    https: config.tasks.server.https,
 	    notify: config.tasks.server.notify
     });
-
-
-  // browserSync({
-  //   port: config.tasks.server.port,
-  //   server: {
-  //     baseDir: config.root.dest 
-  //   }
-  // });
 });

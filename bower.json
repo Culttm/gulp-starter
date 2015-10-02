@@ -1,5 +1,5 @@
 {
-  "name": "gulp-starter",
+  "name": "Gulp starter",
   "version": "0.0.1",
   "authors": [
     "Culttm <culttm@gmail.com>"
@@ -14,8 +14,19 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "malihu-custom-scrollbar-plugin": "~3.0.9",
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap-sass": "~3.3.5",
+    "jquery": "2.1.4",
+    "object.keys": "*"
+  },
+  "overrides": {
+    "owl.carousel": {
+      "main": "dist/owl.carousel.js"
+    },
+    "bootstrap-sass": {
+      "main": "null"
+    },
+    "object.keys":{
+      "main":"src/object.keys.js"
+    }
   }
 }
